@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Go Destination Run</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="game/style.css">
+    </head>
+    <body>
+        <div class="allScreen">
+            <div class="screen">
+                <div class="jdl">GDR</div>
+                <div class="judul">Go Destination Run !</div>
+                <div class="sun"></div>
+                <div class="ground">
+                </div>
+            </div>
+    
+            <div class="box">
+                <div class="bx">
+                <a class="mulai1" href="game/game.html"><div class="mulai">Mulai</div></a>
+                <a class="aturan1" href="#"><div class="aturan">Aturan Permainan</div></a>
+                <a class="buku1" href="#"><div class="buku">Baca Buku</div></a>
+                <a class="tentang1" href="#"><div class="tentang">Tentang</div></a>     
+                </div>
+
+            </div>
+
+            <script>
+
+                const jdl = document.querySelector(".jdl");
+                const judul = document.querySelector(".judul");
+                judul.style.display = "none";
+
+                let hght = 150;
+                const munculJudul = setInterval(function() {
+                    jdl.style.height = hght + "%";
+                    hght -= 0.5;
+                    if(hght <= 75) {
+                        clearInterval(munculJudul);
+                        judul.style.display = "block";
+                    }
+                },5)
+
+                function rules() {
+                    alert("<--------- Go Destination Run --------->\n\nATURAN PERMAINAN\n\n1. Pilih jawaban yang benar untuk bisa melompati setiap blok.\nTombol lompat = Jawaban yang benar\n\n2. Jika kamu menjawab salah, maka poinmu akan berkurang satu.\nJawaban salah = point -1\n\n3. Jika kamu menjawab benar, maka poinmu akan bertambah satu.\nJawaban benar = point +1\n\n4. Skor kamu akan terus bertambah satu selama karaktermu berjalan.\n\n5. Total Skor kamu adalah jumlah dari skor dan poinmu.\nTotal Skor = Skor + Poin.\n\nCATATAN :\nSebelum memulai permainan, ada baiknya kalian membaca buku sebagai rujukan untuk menjawab pertanyaan-pertanyaan nantinya (buka pada menu Baca Buku).\n\nKlik 'OK' jika kamu sudah siap.");
+                    let myPrmpt, myAlrt = null;
+
+                }
+
+                const aturan = document.querySelector(".aturan");
+                aturan.onclick = rules;
+
+                function book() {
+                    alert("Kisi-Kisi :\n\n1. Sumur Tiga - Dijuluki sebagai Hawai-nya Sabang\n2. Danau Toba - Keindahan dengan Pulau Samosir di tengahnya\n3. Ngarai Sianok - Lembah curam di kota Bukittinggi\n4. Sungai Kampar - Terkenal dengan ombak Bono-nya\n5. Kepulauan Anambas - Terletak di provinsi Kepulauan Riau\n6. Candi Muaro Jambi - Kompleks candi Hindu-Budha di tanah Jambi\n7. Fort Marlborough - Benteng ini terletak di Bengkulu\n8. Museum Sultan Mahmud Badaruddin - Museum ini terletak di Palembang\n9. Parai Tenggiri - Pantai ini terletak di Kepulauan Bangka Belitung\n10. Taman Nasional Way Kambas - Tempat konservasi dan pelatihan gajah\n11. Peucang - Terdapat di selat Panaitan Kabupaten Pandeglang Banten\n12. Kepulauan Seribu - Wilayah Kepulauan ini meliputi gugusan kepulauan di Teluk Jakarta\n13. Kawah Putih - Danau ini merupakan salah satu tempat wisata di Jawa Barat");
+                    alert("14. Pelabuhan Ratu - Pantai yang paling terkenal yang ada di Sukabumi\n15. Kota Lama - Dijuluki dengan The Little Netherlands\n16. Karimun Jawa - Dijuluki sebagai Pulau Karibia-nya Jawa\n17. Taman Nasional Bantimurung - Dijuluki sebagai The Kingdom of Butterfly\n18. Pantai Siung - Salah satu objek wisata di Yogyakarta\n19. Canting Mas Puncak Dipowono - Objek wisata spot foto di Yogyakarta\n20. Air Terjun Kedung Pedut - Salah satu wisata alam di Kulonprogo\n21. Taman Nasional Bromo Tengger Semeru - Daerah vulkanik terbesar di provinsi Jawa Timur\n22. Kawah Ijen -  Danau belerang terbesar di Pulau Jawa\n23. Tugu Khatulistiwa - Dibangun sebagai penanda garis lintang nol derajat bumi\n24. Pulau Derawan - Menduduki peringkat ketiga tempat menyelam bertaraf internasional\n25. Barito - Melintang di atas sungai Barito, Kalimantan Selatan\n26. Pantai Batu Lamampu - Salah satu objek wisata Pantai di kalimantan Utara");
+                    alert("27. Nusa Dua - Tempat dengan kemewahan surgawi di tenggara pulau Bali\n28. Pura Luhur Uluwatu - Salah satu pura yang ada di Bandung\n29. Gili Trawangan - Salah satu dari tiga pulau kecil Kepulauan Gili\n30. Gunung Rinjani - Terletak di Pulau Lombok, Nusa Tenggara Barat\n31. Air Terjun Parangloe - Tempat wisata air terjun ini berada di Sulawesi Selatan\n32. Pantai Losari - Pantai ini merupakan primadona bagi yang berkunjung ke Kota Makassar\n33. Wakatobi - Dijuluki Kepulauan Tukang Besi di Sulawesi Tenggara\n34. Taman Nasional Kepualauan Togean - Terkenal kaya akan terumbu karang di Sulawesi Tengah\n35. Pantai Dato Majene - Salah satu objek wisata pantai di Sulawesi Barat\n36. Bunaken - Kawasan konservasi terumbu karang di Sulawesi Utara\n37. Pantai Ora - Salah satu pantai dengan pemandangan eksotis di Maluku\n38. Halmahera - Merupakan pulau terbesar di Kepulauan Maluku\n39. Raja Ampat - Berupa rangkaian 4 gugusan pulau di Papua Barat\n40. Danau Sentani - Terbentang antara Kota Jayapura dan Kabupaten Jayapura");
+                }
+                
+                const buku = document.querySelector(".buku");
+                buku.onclick = book;
+
+                function about() {
+                    alert("Name of Game :\nGDR - Go Destination Run !\n\nDeveloper Name : Muhammad Amirul Haq\nPublished on 10 December 2020");
+                }
+
+                const tentang = document.querySelector(".tentang");
+                tentang.onclick = about;
+
+            </script>
+        </div>
+    </body>
+</html>
